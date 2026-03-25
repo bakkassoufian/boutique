@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atelier Mars - Réparation & vente de lunettes</title>
+    <meta
+      name="description"
+      content="Atelier de réparation de lunettes et conseils en boutique. Diagnostic, remplacement de pièces, réglages précis et verres adaptés."
+    />
+    <link rel="stylesheet" href="repair-styles.css" />
+    <script defer src="repair-script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="logo" href="#top" aria-label="Retour en haut de page">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14 24c0-7.2 5.8-13 13-13h10c7.2 0 13 5.8 13 13v16c0 7.2-5.8 13-13 13H27c-7.2 0-13-5.8-13-13V24Z"
+                stroke="currentColor"
+                stroke-width="3"
+              />
+              <path
+                d="M24 23c0-4.4 3.6-8 8-8s8 3.6 8 8"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <path
+                d="M18 30c4.4 0 7.8 3.4 7.8 7.8S22.4 45.6 18 45.6s-7.8-3.4-7.8-7.8S13.6 30 18 30Z"
+                stroke="currentColor"
+                stroke-width="3"
+              />
+              <path
+                d="M46 30c4.4 0 7.8 3.4 7.8 7.8S50.4 45.6 46 45.6s-7.8-3.4-7.8-7.8S41.6 30 46 30Z"
+                stroke="currentColor"
+                stroke-width="3"
+              />
+            </svg>
+          </span>
+          <span class="logo-text">Atelier Mars</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-controls="primaryNav"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+        >
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav class="primary-nav" id="primaryNav" aria-label="Navigation principale">
+          <a href="#services">Services</a>
+          <a href="#process">Comment ça se passe</a>
+          <a href="#tarifs">Tarifs indicatifs</a>
+          <a href="#avis">Avis</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Rendez-vous</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn-ghost" href="#contact">Prendre rendez-vous</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-scrim" id="mobileScrim" hidden></div>
+
+    <main id="main">
+      <section class="hero" aria-label="Bannière">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="hero-badge">Réparation précise. Conseils clairs.</p>
+            <h1>
+              L’atelier pour vos lunettes.
+              <span class="accent">Réglées, réparées, vérifiées.</span>
+            </h1>
+            <p class="hero-sub">
+              On diagnostique, on répare et on ajuste : charnières, vis, plaquettes, alignement, et contrôles
+              complémentaires. Vente de lunettes en boutique (sans e-commerce) et accompagnement verres adaptés.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#contact">Demander un diagnostic</a>
+              <a class="btn btn-ghost" href="#process">Voir le parcours atelier</a>
+            </div>
+
+            <div class="trust-row" role="list" aria-label="Points forts">
+              <div class="trust-item" role="listitem">
+                <span class="trust-icon" aria-hidden="true">🛠️</span>
+                <strong>Atelier interne</strong>
+                <span>réglages & réparations</span>
+              </div>
+              <div class="trust-item" role="listitem">
+                <span class="trust-icon" aria-hidden="true">⏱️</span>
+                <strong>Délai indicatif</strong>
+                <span>24h à 72h</span>
+              </div>
+              <div class="trust-item" role="listitem">
+                <span class="trust-icon" aria-hidden="true">🎯</span>
+                <strong>Conseils</strong>
+                <span>verres & confort</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-board">
+              <div class="board-glow"></div>
+              <div class="board-grid"></div>
+              <div class="board-frame">
+                <svg viewBox="0 0 240 150" class="frame-svg" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="rg" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#ffbf3c" stop-opacity="0.55" />
+                      <stop offset="1" stop-color="#7dd3fc" stop-opacity="0.25" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="0" y="0" width="240" height="150" rx="18" fill="url(#rg)" opacity="0.10" />
+                  <path
+                    d="M60 76c0-20 16-36 36-36h48c20 0 36 16 36 36v22c0 20-16 36-36 36H96c-20 0-36-16-36-36V76Z"
+                    fill="none"
+                    stroke="rgba(255,255,255,0.22)"
+                    stroke-width="4"
+                  />
+                  <path
+                    d="M96 76c0-8 6-14 14-14h20c8 0 14 6 14 14"
+                    fill="none"
+                    stroke="rgba(125,211,252,0.9)"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M110 92h20"
+                    stroke="rgba(255,191,60,0.65)"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services" aria-label="Services">
+        <div class="container">
+          <div class="section-head">
+            <h2>Nos services réparation & ajustement</h2>
+            <p class="section-sub">
+              Tout ce qui compte pour retrouver un confort immédiat : diagnostic, remise en état et réglage au millimètre.
+            </p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="service-card">
+              <h3>Réparation rapide</h3>
+              <p>
+                Charnières, vis, plaquettes, branches desserrées : on remet vos lunettes d’aplomb avec des pièces
+                compatibles et un contrôle final.
+              </p>
+              <ul class="list">
+                <li>Diagnostic atelier</li>
+                <li>Remplacement des petites pièces</li>
+                <li>Contrôle d’alignement</li>
+              </ul>
+              <a class="btn btn-ghost" href="#contact" data-cta="rendezvous">Déposer une demande</a>
+            </article>
+
+            <article class="service-card">
+              <h3>Réglage & confort</h3>
+              <p>
+                Quand la monture “glisse”, quand l’angle n’est plus bon, ou quand la vision fatigue : on ajuste et on vérifie.
+              </p>
+              <ul class="list">
+                <li>Ajustement des branches</li>
+                <li>Réglage du port</li>
+                <li>Conseils de verres</li>
+              </ul>
+              <a class="btn btn-ghost" href="#contact" data-cta="rendezvous">Prendre rendez-vous</a>
+            </article>
+
+            <article class="service-card">
+              <h3>Diagnostic & remise en état</h3>
+              <p>
+                Avant toute intervention, on explique le “pourquoi” et on propose la solution la plus cohérente
+                (réparation ou optimisation).
+              </p>
+              <ul class="list">
+                <li>Inspection complète</li>
+                <li>Plan d’action clair</li>
+                <li>Validation en atelier</li>
+              </ul>
+              <a class="btn btn-ghost" href="#process">Voir comment on travaille</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="process" aria-label="Comment ça se passe">
+        <div class="container">
+          <div class="section-head">
+            <h2>Comment ça se passe à l’atelier</h2>
+            <p class="section-sub">
+              Un parcours simple, pour que vous sachiez exactement où en sont vos lunettes.
+            </p>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Vous déposez</h3>
+                <p>En boutique, vous décrivez le souci (ou vous envoyez un message via le formulaire).</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>On diagnostique</h3>
+                <p>Inspection mécanique et contrôle des réglages. On vous indique la meilleure solution.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h3>On répare</h3>
+                <p>Remplacement de pièces si nécessaire, puis ajustements et vérifications en atelier.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-num">4</div>
+              <div class="step-body">
+                <h3>Essai & retour</h3>
+                <p>Vous repartez avec un port confortable. Conseils d’usage pour prolonger la durée de vie.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="tarifs" aria-label="Tarifs indicatifs">
+        <div class="container">
+          <div class="section-head">
+            <h2>Tarifs indicatifs (démo)</h2>
+            <p class="section-sub">
+              Les prix varient selon la monture et les pièces. L’atelier vous confirme un devis avant intervention.
+            </p>
+          </div>
+
+          <div class="cards-grid three">
+            <article class="price-card">
+              <div class="price-top">
+                <h3>Charnières & ajustements</h3>
+                <div class="price-tag">à partir de 29€</div>
+              </div>
+              <p class="price-desc">Réglage précis, remise en tension et contrôle final du port.</p>
+              <p class="price-foot">Exemple illustratif. Devis en boutique.</p>
+            </article>
+            <article class="price-card">
+              <div class="price-top">
+                <h3>Vis & plaquettes</h3>
+                <div class="price-tag">à partir de 19€</div>
+              </div>
+              <p class="price-desc">Remplacement des éléments et vérification de l’équilibre de la monture.</p>
+              <p class="price-foot">Exemple illustratif. Dépend de la compatibilité.</p>
+            </article>
+            <article class="price-card">
+              <div class="price-top">
+                <h3>Diagnostic atelier</h3>
+                <div class="price-tag">gratuit (selon cas)</div>
+              </div>
+              <p class="price-desc">Inspection mécanique + recommandations pour la réparation ou l’optimisation.</p>
+              <p class="price-foot">Contactez-nous pour confirmer.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" aria-label="Avant / après">
+        <div class="container">
+          <div class="section-head">
+            <h2>Avant / Après (illustrations)</h2>
+            <p class="section-sub">Des exemples visuels pour montrer le type de remise en état que l’on réalise.</p>
+          </div>
+
+          <div class="compare-grid">
+            <figure class="compare-card">
+              <div class="compare-label">Avant</div>
+              <div class="compare-image before" aria-hidden="true"></div>
+              <figcaption>Monture instable / alignement à revoir</figcaption>
+            </figure>
+            <figure class="compare-card">
+              <div class="compare-label">Après</div>
+              <div class="compare-image after" aria-hidden="true"></div>
+              <figcaption>Réglage fin & confort retrouvé</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="avis" aria-label="Avis clients">
+        <div class="container">
+          <div class="section-head">
+            <h2>Avis clients</h2>
+            <p class="section-sub">Retour d’expérience après réparation et réglages en boutique.</p>
+          </div>
+
+          <div class="testimonials">
+            <article class="testimonial">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <p class="quote">“Réparation rapide et vrai réglage. Mes lunettes ne bougent plus.”</p>
+              <div class="who">
+                <div class="avatar" aria-hidden="true">M</div>
+                <div>
+                  <strong>Marie</strong>
+                  <span>Île-de-France</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <p class="quote">“Conseils clairs sur les verres et ajustement au top. Service sérieux.”</p>
+              <div class="who">
+                <div class="avatar" aria-hidden="true">J</div>
+                <div>
+                  <strong>Julien</strong>
+                  <span>Lyon</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <p class="quote">“Charnières comme neuves. On sent l’expertise atelier.”</p>
+              <div class="who">
+                <div class="avatar" aria-hidden="true">S</div>
+                <div>
+                  <strong>Sofia</strong>
+                  <span>Bordeaux</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="faq" aria-label="Questions fréquentes">
+        <div class="container">
+          <div class="section-head">
+            <h2>FAQ</h2>
+            <p class="section-sub">Réponses rapides aux questions les plus fréquentes.</p>
+          </div>
+
+          <div class="faq" id="faqList">
+            <div class="faq-item">
+              <h3>
+                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq1">
+                  Pouvez-vous réparer toutes les montures ?
+                </button>
+              </h3>
+              <div class="faq-panel" id="faq1" hidden>
+                <p>
+                  Dans la plupart des cas, oui : on vérifie la compatibilité des pièces et la faisabilité mécanique en atelier.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <h3>
+                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq2">
+                  Combien de temps prend une réparation ?
+                </button>
+              </h3>
+              <div class="faq-panel" id="faq2" hidden>
+                <p>
+                  Le délai dépend de la pièce à remplacer et de la vérification de l’alignement. En général, 24h à 72h pour les cas courants.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <h3>
+                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq3">
+                  Proposez-vous aussi des ajustements et contrôles ?
+                </button>
+              </h3>
+              <div class="faq-panel" id="faq3" hidden>
+                <p>
+                  Oui : réglage des branches, équilibre de la monture et vérification du confort. Nous conseillons aussi des options de verres.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <h3>
+                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq4">
+                  Comment demander un devis ?
+                </button>
+              </h3>
+              <div class="faq-panel" id="faq4" hidden>
+                <p>
+                  Utilisez le formulaire “Rendez-vous” : décrivez le problème et, si possible, mentionnez le modèle ou la marque. On vous recontacte.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-label="Rendez-vous">
+        <div class="container contact-grid">
+          <div class="contact-copy">
+            <h2>Rendez-vous & demande d’atelier</h2>
+            <p class="section-sub">
+              Décrivez votre besoin (réparation, réglage, remplacement de pièces ou conseils verres). Réponse rapide en démo.
+            </p>
+
+            <div class="contact-highlights" role="list" aria-label="Informations">
+              <div class="highlight" role="listitem">
+                <div class="highlight-title">Réponse</div>
+                <div class="highlight-desc">Sous 24h ouvrées</div>
+              </div>
+              <div class="highlight" role="listitem">
+                <div class="highlight-title">Atelier</div>
+                <div class="highlight-desc">Contrôle & ajustement</div>
+              </div>
+              <div class="highlight" role="listitem">
+                <div class="highlight-title">Conseils</div>
+                <div class="highlight-desc">Verres & confort</div>
+              </div>
+            </div>
+          </div>
+
+          <form class="form-card" id="contactForm">
+            <div class="form-row">
+              <label for="serviceType">Type de demande</label>
+              <select id="serviceType" name="serviceType" required>
+                <option value="" selected disabled>Choisir…</option>
+                <option value="reparation">Réparation</option>
+                <option value="reglage">Réglage & confort</option>
+                <option value="verres">Conseils verres</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="name">Nom</label>
+              <input id="name" name="name" type="text" placeholder="Votre nom" autocomplete="name" required />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="vous@exemple.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Ex : charnière desserrée, lunettes qui glissent…"
+                required
+              ></textarea>
+            </div>
+
+            <button class="btn btn-primary w-full" type="submit">Envoyer la demande</button>
+            <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+            <p class="form-footnote">
+              En envoyant ce formulaire, vous acceptez d’être recontacté par notre équipe (démo).
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" aria-label="Pied de page">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-logo">
+            <span class="logo-mark small" aria-hidden="true">
+              <svg viewBox="0 0 64 64" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14 24c0-7.2 5.8-13 13-13h10c7.2 0 13 5.8 13 13v16c0 7.2-5.8 13-13 13H27c-7.2 0-13-5.8-13-13V24Z"
+                  stroke="currentColor"
+                  stroke-width="3"
+                />
+                <path
+                  d="M24 23c0-4.4 3.6-8 8-8s8 3.6 8 8"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span>Atelier Mars</span>
+          </div>
+          <p class="footer-copy">Landing démo : réparation & conseils atelier, sans e-commerce.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#process">Parcours atelier</a>
+          <a href="#tarifs">Tarifs indicatifs</a>
+          <a href="#avis">Avis</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Rendez-vous</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Atelier Mars. Tous droits réservés.</span>
+        <span class="footer-small">Mentions légales · Confidentialité</span>
+      </div>
+    </footer>
+  </body>
+</html>
+
